@@ -3,8 +3,9 @@ const form = document.querySelector('form');
 // const height = parseInt(document.querySelector('#height').value)
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();
+  e.preventDefault();//Ye iss liye kiya kyuki submit karte hai request jaati hai ya get ya to post ke form me usko rokne ke liye
 
+  //parseInt string ko number me change karta hai
   const height = parseInt(document.querySelector('#height').value);
   const weight = parseInt(document.querySelector('#weight').value);
   const results = document.querySelector('#results');
@@ -18,6 +19,7 @@ form.addEventListener('submit', function (e) {
     const bmi = (weight / ((height * height) / 10000)).toFixed(2);
     //show the result
     results.innerHTML = `<span>${bmi}</span>`;
+    
     if(bmi<=18.6){
         newbox.innerHTML = "Under Weight"
     }
