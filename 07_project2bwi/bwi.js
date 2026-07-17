@@ -3,7 +3,7 @@ const form = document.querySelector('form');
 // const height = parseInt(document.querySelector('#height').value)
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();//Ye iss liye kiya kyuki submit karte hai request jaati hai ya get ya to post ke form me usko rokne ke liye
+  e.preventDefault();//Ye iss liye kiya kyuki submit karte hai request jaati hai ya get ya to post ke form me usko rokne ke liye kyuki form me aisa hi hota hai
 
   //parseInt string ko number me change karta hai
   const height = parseInt(document.querySelector('#height').value);
