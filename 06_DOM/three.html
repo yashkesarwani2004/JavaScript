@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">MONDAY</div>
+        <div class="day">TUESDAY</div>
+        <div class="day">WEDNESDAY</div>
+        <div class="day">THURSDAY</div>
+    </div>
+    
+</body>
+<script>
+    const day = document.querySelector('.parent')
+    console.log(day);
+    console.log(day.children);//ye html collection dega
+    console.log(day.children[1].innerHTML);
+    
+    for (let i = 0; i < day.children.length; i++) {
+        console.log(day.children[i].innerHTML);
+        
+    }
+
+    day.children[2].style.color = "green"
+    console.log(day.children[2]);
+    console.log(day.firstElementChild);
+    console.log(day.lastElementChild);
+    
+    const d = document.querySelector('.day')
+    console.log(d);
+    console.log(d.parentElement);
+    console.log(d.nextElementSibling);
+    
+    console.log("NODES :", day.childNodes);
+    //ye hmko ek nodelist deti hai jisme parent ke andar ka child ka ek ek chij rahta hai enter karoge ek line vo bhi nodelist me rahega 
+    
+</script>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chai aue code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(langName){
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}` //innerHTML ye pura jaa kar likhta hai matlab pura tree trivers karta hai jo bekar hai
+        document.querySelector('.language').appendChild(li)
+        //yaha phele li create kiya fir usko value diya fir uske badd class ko sel kiya aur vahi me append karke value daal diya
+    }
+    addLang("cpp")
+    addLang("java")
+    
+    //yaha vale me text node bana hai fir usko add kiya li me jisse trivers nahi karna pada
+    function addOptLang(langName){
+        const li = document.createElement("li")// li banaya
+        li.appendChild(document.createTextNode(langName))//li ko value diya
+        document.querySelector('.language').appendChild(li)//value daala
+    }
+    addOptLang("html")
+    addOptLang("css")
+
+    //edit
+    const secLang = document.querySelector('li:nth-child(2)')//li:nth-child(2) iska matlab hai li me jaa kar 2 vale ko select kar lo
+    console.log(secLang);
+    // secLang.innerHTML = "mojo" //ye bhi tarika hai kar sakte ho
+    const newli = document.createElement("li")
+    newli.textContent = "mojo"
+    secLang.replaceWith(newli)
+
+    //edit
+    const firstLang = document.querySelector('li:nth-child(1)') //yaha li:first-child bhi use kar sakte the
+    firstLang.outerHTML = "<li>python</li>"
+
+    //remove
+    const del = document.querySelector("li:last-child")
+    del.remove()
+</script>
+</html>

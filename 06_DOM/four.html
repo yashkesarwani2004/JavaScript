@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai aur Code</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+    div.className = 'main'
+    div.id = Math.round(Math.random() * 10 + 1)
+    div.setAttribute('title','yash and som')
+    div.innerText = 'chai aur code'
+    // const addtext = document.createTextNode('chai aur code')
+    // div.appendChild(addtext)
+    div.style.backgroundColor = "green"
+    div.style.padding = "12px"
+
+    //aab ye sab uper vala kaam mere memory me hai usko page me lana ke liye hmko body me appendchild karna hoga
+    document.body.appendChild(div)
+</script>
+</html>
