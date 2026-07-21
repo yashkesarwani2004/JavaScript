@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" placeholder="Enter City Name" spellcheck="false">
+            <button id="button"><img style="height: 40px;width: 43px;object-fit: cover;" src="data:image/jpeg;base64,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" ></button>
+        </div>
+        <div class="error">
+            <p>Invalid City Name</p>
+        </div>
+        <div class="weather">
+        <img src="https://cdn-icons-png.flaticon.com/128/17189/17189587.png" class="weather-icon">
+        <h1 class="temp">22°C</h1>
+        <h2 class="city">New York</h2>
+        <div class="details">
+            <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/128/13944/13944027.png" >
+                <div>
+                    <p class="humidity">50%</p>
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <div class="col">
+            <img src="https://cdn-icons-png.flaticon.com/128/6014/6014727.png" >
+                <div>
+                    <p class="wind">15 km/h</p>
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
