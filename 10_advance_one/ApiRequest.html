@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121;">
+    0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    //yaha hm log ek url send kar rahe aur fir samne url se ek data aa raha usme se jo mujhe chahiye vo use kar rahe hai
+    const requesUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest(); //yaha xml jo hai vo ek class hai jismo use karke hi koi bhi data bhej sakte hai aur samne se data aaye to usko use kar sakte hai new usko obj me badal dega
+    xhr.open('GET', requesUrl) //open se shuru hota hai bhejna data ka get post kuch bhi use kar sakte ho
+    xhr.onreadystatechange = function(){//onready ye satate ko dekhta rahta hai agar change hota hai to turant jo function me rahega usko chala deta hai
+        console.log(xhr.readyState);//state ka number btaye jaise 1 2 3 jab bhi change hoga state tab
+        if(xhr.readyState === 4){
+            const data =JSON.parse(this.responseText) //ye string se json me change kar dega aur this current context me use karte hai to vaha ka value de dega
+            console.log(typeof data);
+            console.log(data.followers);
+        }
+    }
+    xhr.send(); //ye use karoge tab jaa kar pura send hoga data
+    
+</script>
+</html>
